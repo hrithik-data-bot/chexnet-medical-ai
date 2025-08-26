@@ -1,0 +1,22 @@
+name: chexnet-medical-ai
+
+channels:
+  - nvidia
+  - pytorch
+  - defaults
+
+dependencies:
+  - python=3.10.6
+  - ipykernel
+  - tqdm
+  - numpy
+  - pandas
+  - matplotlib
+  - seaborn 
+  - scikit-learn
+  - pillow
+  - pytorch==2.3.0
+  - pytorch-cuda=11.8
+  - torchvision==0.18.0
+  - pip:
+      - tensorflow==2.10.1

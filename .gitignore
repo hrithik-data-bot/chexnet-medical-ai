@@ -1,0 +1,10 @@
+.ipynb_checkpoints
+.ipynb_checkpoints/
+chexnet-pneumonia-detection/notebooks/*/.ipynb_checkpoints
+chexnet-pneumonia-detection/notebooks/*/*/.ipynb_checkpoints
+
+.env
+.venv
+env/
+venv/
+ENV/
