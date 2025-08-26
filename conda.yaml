@@ -6,17 +6,12 @@ channels:
   - defaults
 
 dependencies:
-  - python=3.10.6
-  - ipykernel
-  - tqdm
+  - python=3.10
   - numpy
-  - pandas
   - matplotlib
-  - seaborn 
   - scikit-learn
   - pillow
+  - pandas
   - pytorch==2.3.0
-  - pytorch-cuda=11.8
   - torchvision==0.18.0
-  - pip:
-      - tensorflow==2.10.1
+  - pytorch-cuda=11.8
