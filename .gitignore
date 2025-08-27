@@ -3,6 +3,7 @@
 chexnet-pneumonia-detection/notebooks/*/.ipynb_checkpoints
 chexnet-pneumonia-detection/notebooks/*/*/.ipynb_checkpoints
 
+*.pkl
 .env
 .venv
 env/
