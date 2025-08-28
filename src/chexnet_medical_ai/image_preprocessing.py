@@ -7,8 +7,8 @@ from torchvision import transforms, datasets
 class ImageTransForm:
     """transformations"""
 
-    train_transforms: transforms.Compose
-    test_transforms: transforms.Compose
+    train_transforms: transforms.Compose = None
+    test_transforms: transforms.Compose = None
 
     def train_image_transforms(self) -> transforms.Compose:
         """train image transformations"""
