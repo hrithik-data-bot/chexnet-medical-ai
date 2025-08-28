@@ -2,6 +2,8 @@
 
 from dataclasses import dataclass
 from torchvision import transforms, datasets
+from torch.utils.data import DataLoader
+
 
 @dataclass
 class ImageTransForm:
@@ -40,9 +42,21 @@ class ImageTransForm:
 
 @dataclass
 class ImageDataLoader:
-    """image data laoder"""
+    """image data loader"""
 
     train_path: str
     test_path: str
 
+    def train_data_loader(self, train_transform: transforms.Compose) -> datasets.ImageFolder:
+        """train data loader"""
 
+        train_data = datasets.ImageFolder(self.train_path, train_transform)
+        train_loader = DataLoader(train_data, batch_size=10, shuffle=True)
+        return train_loader
+
+    def test_data_laoder(self, test_transform: transforms.Compose) -> datasets.ImageFolder:
+        """test data loader"""
+
+        test_data = datasets.ImageFolder(self.test_path, test_transform)
+        test_loader = DataLoader(test_loader, batch_size=10)
+        return test_data
