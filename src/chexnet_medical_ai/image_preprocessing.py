@@ -1,11 +1,11 @@
-"""module for image preprocessing"""
+"""module for image preprocessing and loaders"""
 
 from dataclasses import dataclass
-from torchvision import transforms
+from torchvision import transforms, datasets
 
 @dataclass
 class ImageTransForm:
-    """train transformation"""
+    """transformations"""
 
     train_transforms: transforms.Compose
     test_transforms: transforms.Compose
@@ -36,3 +36,13 @@ class ImageTransForm:
                                   0.229, 0.224, 0.225])
         ])
         return self.test_transforms
+
+
+@dataclass
+class ImageDataLoader:
+    """image data laoder"""
+
+    train_path: str
+    test_path: str
+
+
