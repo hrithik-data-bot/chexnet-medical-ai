@@ -47,17 +47,31 @@ class ImageDataLoader:
     train_path: str
     test_path: str
 
-    # TODO:- Different functions for data and loaders
+    def train_data(self, train_transform: transforms.Compose) -> datasets.ImageFolder:
+        """train data"""
+
+        train_data = datasets.ImageFolder(self.train_path, train_transform)
+        return train_data
+        
+
     def train_data_loader(self, train_transform: transforms.Compose) -> datasets.ImageFolder:
         """train data loader"""
 
-        train_data = datasets.ImageFolder(self.train_path, train_transform)
+        train_data = self.train_data(train_transform)
         train_loader = DataLoader(train_data, batch_size=10, shuffle=True)
         return train_loader
+
+
+    def test_data(self, test_transform: transforms.Compose) -> datasets.ImageFolder:
+        """test data"""
+
+        test_data = datasets.ImageFolder(self.test_path, test_transform)
+        return test_data
+
 
     def test_data_laoder(self, test_transform: transforms.Compose) -> datasets.ImageFolder:
         """test data loader"""
 
-        test_data = datasets.ImageFolder(self.test_path, test_transform)
+        test_data = self.test_data(test_transform)
         test_loader = DataLoader(test_data, batch_size=10)
         return test_loader
