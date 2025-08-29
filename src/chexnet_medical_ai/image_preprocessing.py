@@ -47,6 +47,7 @@ class ImageDataLoader:
     train_path: str
     test_path: str
 
+    # TODO:- Different functions for data and loaders
     def train_data_loader(self, train_transform: transforms.Compose) -> datasets.ImageFolder:
         """train data loader"""
 
