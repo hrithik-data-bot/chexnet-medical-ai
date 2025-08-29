@@ -58,5 +58,5 @@ class ImageDataLoader:
         """test data loader"""
 
         test_data = datasets.ImageFolder(self.test_path, test_transform)
-        test_loader = DataLoader(test_loader, batch_size=10)
+        test_loader = DataLoader(test_data, batch_size=10)
         return test_data
