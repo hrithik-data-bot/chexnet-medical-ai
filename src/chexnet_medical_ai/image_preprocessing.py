@@ -69,7 +69,7 @@ class ImageDataLoader:
         return test_data
 
 
-    def test_data_laoder(self, test_transform: transforms.Compose) -> datasets.ImageFolder:
+    def test_data_loader(self, test_transform: transforms.Compose) -> datasets.ImageFolder:
         """test data loader"""
 
         test_data = self.test_data(test_transform)
