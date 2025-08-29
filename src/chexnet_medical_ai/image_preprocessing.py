@@ -59,4 +59,4 @@ class ImageDataLoader:
 
         test_data = datasets.ImageFolder(self.test_path, test_transform)
         test_loader = DataLoader(test_data, batch_size=10)
-        return test_data
+        return test_loader
