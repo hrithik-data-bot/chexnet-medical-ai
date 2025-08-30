@@ -1,9 +1,8 @@
 """training loop"""
 
 import torch
+from torch.nn import functional as F
 import torch.nn as nn
-import torch.optim as optim
-from torch.utils.data import DataLoader
 from chexnet_medical_ai.model_layers import DenseNet121
 
 
@@ -12,11 +11,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model = model.to(device)
 
 
-criterion = nn.CrossEntropyLoss()
-optimizer = optim.Adam(model.parameters(), lr=1e-4, weight_decay=1e-4)
-
-
-def train_model(model, train_loader, val_loader, epochs=50):
+def train_model(model, train_loader, val_loader, epochs, criterion, optimizer, device):
     """training loop"""
     
     for epoch in range(epochs):
