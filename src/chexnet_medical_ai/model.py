@@ -3,7 +3,7 @@
 from torch import nn as nn
 from torch.nn import functional as F
 
-class ConvolutionalNewtwork(nn.Module):
+class ConvolutionalNetwork(nn.Module):
     """CNN Class"""
 
     def __init__(self):
