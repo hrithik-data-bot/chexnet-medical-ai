@@ -1,10 +1,9 @@
 """module for chexnet model same as paper"""
 
 import torch
+from torch.nn import functional as F
 import torch.nn as nn
-import torch.optim as optim
 from torch.utils.data import DataLoader
-from torch import functional as F
 
 class _DenseLayer(nn.Module):
     
