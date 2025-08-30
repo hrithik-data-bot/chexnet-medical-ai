@@ -20,7 +20,7 @@ class ConvolutionalNetwork(nn.Module):
     def forward(self, X):
         """forward propagation"""
         
-        X = F.relu(self, self.conv1(X))
+        X = F.relu(self.conv1(X))
         X = F.max_pool2d(X,2,2)
         X = F.relu(self.conv2(X))
         X = F.max_pool2d(X,2,2)
